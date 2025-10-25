@@ -1,6 +1,4 @@
-<p align="center">
-  # 🚀 FastAPI Blog API
-</p>
+<h2 align="center">  🚀 FastAPI Blog API</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/FastAPI-Backend-blue?style=flat-square" alt="FastAPI">
@@ -9,7 +7,7 @@
   <img src="https://img.shields.io/badge/License-Apache%202.0-lightgrey?style=flat-square" alt="License">
 </p>
 
-A modern, async-ready blog backend built with FastAPI + SQLModel + PostgreSQL.
+<p align="center">A modern, async-ready blog backend built with FastAPI + SQLModel + PostgreSQL.</p>
 
 ---
 
