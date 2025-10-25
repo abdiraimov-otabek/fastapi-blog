@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+*.log
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Alembic
+alembic/versions/*.pyc
+alembic/versions/__pycache__/
+
+# pytest / testing
+.pytest_cache/
+.cache
+.coverage
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+test_results/
+
+# UV / UV environment files
+.uv/
+uv.lock
+uv_sync.lock
+
+# Misc
+*.env
+.env
+.env.local
+.env.*.local

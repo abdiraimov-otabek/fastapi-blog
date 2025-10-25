@@ -1,0 +1,56 @@
+name: FastAPI CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: otabek-abdiraimov
+          POSTGRES_PASSWORD: 1212
+          POSTGRES_DB: blog_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U otabek-abdiraimov -d blog_test"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install uv and dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install uv
+          pip install -r requirements.txt
+          uv sync
+
+      - name: Wait for Postgres
+        run: |
+          until pg_isready -h localhost -p 5432 -U otabek-abdiraimov; do
+            sleep 1
+          done
+
+      - name: Run migrations
+        env:
+          DATABASE_URL: postgresql+asyncpg://otabek-abdiraimov:1212@localhost:5432/blog_test
+        run: |
+          source .venv/bin/activate
+          uv run alembic upgrade head
