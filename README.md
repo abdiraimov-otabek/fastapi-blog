@@ -1,4 +1,4 @@
-# 🚀 FastAPI Blog API
+<h1 style="text-align: center;">🚀 FastAPI Blog API</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/FastAPI-Backend-blue?style=flat-square" alt="FastAPI">
