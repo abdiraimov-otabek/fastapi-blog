@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/FastAPI-Backend-blue?style=flat-square" alt="FastAPI">
   <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=flat-square" alt="Python">
   <img src="https://img.shields.io/badge/Database-PostgreSQL-green?style=flat-square" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/License-Apache%202.0-lightgrey?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/License-Apache%202.0-lightgrey?style=flat-square" alt="MIT">
 </p>
 
 <p align="center">A modern, async-ready blog backend built with FastAPI + SQLModel + PostgreSQL.</p>
